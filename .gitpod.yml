@@ -1,0 +1,7 @@
+ports:
+  - port: 5000
+
+tasks:
+  - before: cd playground/game
+    init: npm install serve 
+    command: npx serve
