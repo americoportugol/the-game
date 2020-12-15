@@ -1,7 +1,7 @@
 const screen = document.getElementById('screen');
 const ctx = screen.getContext('2d');
-screen.width = 800;
-screen.height = 500;
+/*var screenwidth = 800;
+var screenheight = 500;*/
 
 const keys = [];
 
@@ -17,4 +17,12 @@ const player = {
 };
 
 const playerSprite = new Image();
-playerSprite.src = ""
+playerSprite.src = "./darthvader.png";
+const background = new Image();
+background.src = "./background.png";
+
+function animate() {
+    ctx.drawImage(background, 110,200, 800, 500);
+    requestAnimationFrame(animate);
+}
+animate();
